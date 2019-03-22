@@ -6,8 +6,6 @@
 
 _A website to find the best doctor for your ailment_
 
-## Specs
-
 ## Setup
 
 * _Clone this repository_
