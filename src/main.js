@@ -23,7 +23,7 @@ $(document).ready(function(){
     request.send();
 
     const getElements = function(response) {
-      $('.showDoc').text(`${response.meta.total} Doctors specialize in that field in Portland`);
+      $('.showDoc').text(`${response.meta.total} Doctors specialize in that field in Portland ${response.data}`);
       console.log(response.meta.limit)
     }
 
