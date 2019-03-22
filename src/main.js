@@ -8,11 +8,9 @@ $(document).ready(function(){
   $('#docSpecialty').click(function(){
     const specialty = $('#specialty').val();
     $('#specialty').val();
-
     let request = new XMLHttpRequest();
     const apiKey = process.env.apiKey;
-    console.log(apiKey);
-    const url = `https://api.betterdoctor.com/2016-03-01/doctors?location=45.51,-122.65,11&user_key=${apiKey}&limit=90&specialty_uid=massage-therapist`;
+    const url = `https://api.betterdoctor.com/2016-03-01/doctors?location=45.51,-122.65,11&user_key=${apiKey}&limit=1&specialty_uid=${specialty}`;
 
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
@@ -25,7 +23,7 @@ $(document).ready(function(){
     request.send();
 
     const getElements = function(response) {
-      $('.showDoc').text(`Doctors in portland who can specialize in that field: ${response}%`);
+      $('.showDoc').text(`Doctors in portland who can specialize in that field: ${response.meta.limit}`);
     }
 
   });
