@@ -22,17 +22,9 @@ $(document).ready(function(){
     request.open("GET", url, true);
     request.send();
 
-
-
     const getElements = function(response) {
-      var i =0;
-      var total = response.data.length;
-      var ids = [];
-      for(; i < total; i++) {
-        ids.push( data[ i ].id );
-      }
-      console.log(ids);
-      $('.showDoc').text(`Doctors in portland who can specialize in that field: ${response.meta.limit}, ${response}`);
+      $('.showDoc').text(`${response.meta.total} Doctors specialize in that field in Portland`);
+      console.log(response.meta.limit)
     }
 
   });
