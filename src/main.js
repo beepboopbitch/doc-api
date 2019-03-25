@@ -24,7 +24,8 @@ $(document).ready(function(){
 
     const getElements = function(response) {
       $('.showDoc').text(`${response.meta.total} Doctors specialize in that field in Portland ${response.data}`);
-      console.log(response.meta.limit)
+      console.log(response.meta.limit);
+      console.log(response.data[0]);
     }
 
   });
