@@ -10,7 +10,7 @@ $(document).ready(function(){
     $('#specialty').val();
     let request = new XMLHttpRequest();
     const apiKey = process.env.apiKey;
-    const url = `https://api.betterdoctor.com/2016-03-01/doctors?location=45.51,-122.65,11&user_key=${apiKey}&limit=2&specialty_uid=${specialty}`;
+    const url = `https://api.betterdoctor.com/2016-03-01/doctors?location=45.51,-122.65,11&user_key=${apiKey}&specialty_uid=${specialty}`;
 
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
@@ -26,8 +26,8 @@ $(document).ready(function(){
 
     const getElements = function(response) {
       const array = response.data[0];
-      console.log(array.profile.first_name);
-      $('.showDoc').text(`${response.meta.total} Doctors specialize in that field in Portland ${response.data[0]}`);
+      console.log();
+      $('.showDoc').text(`${response.meta.total} Doctors specialize in that field in Portland ${array.profile.first_name}`);
       console.log(response.meta.limit);
     }
 
