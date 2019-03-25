@@ -19,13 +19,16 @@ $(document).ready(function(){
       }
     }
 
+
+
     request.open("GET", url, true);
     request.send();
 
     const getElements = function(response) {
+      const array = response.data[0];
+      console.log(array.profile.first_name);
       $('.showDoc').text(`${response.meta.total} Doctors specialize in that field in Portland ${response.data[0]}`);
       console.log(response.meta.limit);
-      console.log(response.data[["practices"]]);
     }
 
   });
