@@ -25,11 +25,18 @@ $(document).ready(function(){
     request.send();
 
     const getElements = function(response) {
-      const array = response.data[0];
+      const doc1 = response.data[0];
+      const doc2 = response.data[1];
+      const doc3 = response.data[2];
+      const doc4 = response.data[3];
+      const doc5 = response.data[4];
+      const doc6 = response.data[5];
+      const doc7 = response.data[6];
+      const doc8 = response.data[7];
+      const doc9 = response.data[8];
+      const doc10 = response.data[9];
       console.log();
-      $('.showDoc').text(`${response.meta.total} Doctors specialize in that field in Portland ${array.profile.first_name}`);
-      console.log(response.meta.limit);
+      $('.showDoc').text(`List of Doctors who specialize in that field: ${doc1.profile.first_name} ${doc1.profile.last_name}, ${doc2.profile.first_name} ${doc2.profile.last_name}, ${doc3.profile.first_name} ${doc3.profile.last_name}, ${doc4.profile.first_name} ${doc4.profile.last_name}, ${doc5.profile.first_name} ${doc5.profile.last_name}, ${doc6.profile.first_name} ${doc6.profile.last_name}, ${doc7.profile.first_name} ${doc7.profile.last_name}, ${doc8.profile.first_name} ${doc8.profile.last_name}, ${doc9.profile.first_name} ${doc9.profile.last_name}, ${doc10.profile.first_name} ${doc10.profile.last_name},`);
     }
-
   });
 });
