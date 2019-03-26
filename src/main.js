@@ -22,18 +22,23 @@ $(document).ready(function(){
         $('.doc1Phone').text(`${(((body.data[0]).practices[0]).phones[0]).number}`);
         $('.doc1St').text(`${((body.data[0]).practices[0]).visit_address.street}`);
         $('.doc1Zip').text(`${((body.data[0]).practices[0]).visit_address.zip}`);
+        $('.doc1Accept').text(`Accepts new patients: ${((body.data[0]).practices[0]).accepts_new_patients}`);
 
         $('.doc2').text(`List of Doctors who specialize in that field:`);
         $('.doc2Name').text(`${(body.data[1]).profile.first_name} ${(body.data[1]).profile.last_name}`);
         $('.doc2Phone').text(`${(((body.data[1]).practices[0]).phones[0]).number}`);
         $('.doc2St').text(`${((body.data[1]).practices[0]).visit_address.street}`);
         $('.doc2Zip').text(`${((body.data[1]).practices[0]).visit_address.zip}`);
+        $('.doc2Accept').text(`Accepts new patients: ${((body.data[1]).practices[0]).accepts_new_patients}`);
+
 
         $('.doc3').text(`List of Doctors who specialize in that field:`);
         $('.doc3Name').text(`${(body.data[2]).profile.first_name} ${(body.data[2]).profile.last_name}`);
         $('.doc3Phone').text(`${(((body.data[2]).practices[0]).phones[0]).number}`);
         $('.doc3St').text(`${((body.data[2]).practices[0]).visit_address.street}`);
         $('.doc3Zip').text(`${((body.data[2]).practices[0]).visit_address.zip}`);
+        $('.doc3Accept').text(`Accepts new patients: ${((body.data[2]).practices[0]).accepts_new_patients}`);
+
       }
     });
   }
