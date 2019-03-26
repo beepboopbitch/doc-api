@@ -17,7 +17,6 @@ export class Doc {
       request.send();
     });
   }
-
   checkResults(body) {
     if(!Object.keys(body.data).length) {
       return false;
