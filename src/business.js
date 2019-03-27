@@ -2,7 +2,7 @@
 export class Doc {
 
   getDoc(specialty) {
-    const apiKey = process.env.apiKey;
+    const apiKey = process.env.exports.apiKey;
     return new Promise(function(resolve, reject){
     let request = new XMLHttpRequest();
     const url = `https://api.betterdoctor.com/2016-03-01/doctors?location=45.51,-122.65,11&user_key=${apiKey}&specialty_uid=${specialty}`;
